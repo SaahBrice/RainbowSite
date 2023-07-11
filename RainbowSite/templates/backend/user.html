@@ -1,0 +1,71 @@
+{% extends 'backend/base.html' %}
+{% load static %}
+{% block title %}
+    User-Home
+{% endblock title %}
+
+{% block content %}
+
+
+<!-- contact -->
+<div id="contact" class="contact">
+<div class="container-fluid padding_left2">
+  <div class="white_color">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+        <form class="contact_bg mx-auto" action="" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-md-12">
+              <div class="titlepage">
+                <h2>Create<strong class="yellow"> Blog Post</strong></h2>
+              </div>
+              <div class="col-md-12">
+                  <input type="text" class="contactus" placeholder="Title" name="title">
+                  <input type="file" class="contactus" placeholder="Select post image" name="post_image">
+                  <textarea class="textarea" placeholder="Message" type="text" name="description"></textarea>
+
+              </div>
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <button type="Submit" class="send" >ADD</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+        <div class="contact_bg mx-auto" >
+          <div class="row">
+            <div class="col-md-12">
+              <div class="titlepage">
+                <h2>My<strong class="yellow"> Posts</strong></h2>
+              </div>
+              <div class="col-md-12">
+                <ul>
+                  
+                  {% for blog in blogs %}
+                  <li>
+                    <h2>{{blog.id}} | {{blog.title}}<strong class="yellow"> <a class="btn btn-sm btn-primary"  href = "{% url 'delete' blog.id %} ">Delete</a></strong></h2>
+                  </li>
+                  {% endfor %}
+                </ul>
+
+              </div>
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- end contact -->
+
+
+
+{% endblock content %}

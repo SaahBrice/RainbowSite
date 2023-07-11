@@ -151,7 +151,7 @@ $(function () {
 
 	/* Contact-form
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-	$.validator.setDefaults({
+/* 	$.validator.setDefaults({
 		submitHandler: function () {
 			alert("submitted!");
 		}
@@ -198,7 +198,7 @@ $(function () {
 				$(element).parents(".col-md-4, .col-md-12").addClass("has-success").removeClass("has-error");
 			}
 		});
-	});
+	}); */
 
 	/* heroslider
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */

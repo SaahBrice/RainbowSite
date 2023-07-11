@@ -1,0 +1,39 @@
+{% extends 'frontend/index.html' %}
+{% load static %}
+{% block title %}
+    Blog section
+{% endblock title %}
+
+{% block content %}
+
+
+<!-- contact -->
+{% for blog in blogs %}
+
+<div id="about" class="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="about-box">
+          <h2>{{blog.title}}</h2>
+          <p>
+            {{blog.description}}
+            </p>
+
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="about-box">
+          <figure><img src="{{blog.image.url}}" alt="#" /></figure>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  </div>
+{% endfor %}
+  <!-- end contact -->
+
+
+
+{% endblock content %}

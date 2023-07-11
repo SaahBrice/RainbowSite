@@ -1,0 +1,52 @@
+{% extends 'frontend/index.html' %}
+{% load static %}
+{% block title %}
+    Rainbow School Complex Dschang
+{% endblock title %}
+
+{% block content %}
+
+
+<!-- contact -->
+<div id="contact" class="contact">
+<div class="container-fluid padding_left2">
+  <div class="white_color">
+    <div class="row">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+        <form class="contact_bg mx-auto" method = "POST">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-md-12">
+              <div class="titlepage">
+                <h2>Your Private<strong class="yellow"> Space</strong></h2>
+                {% if messages %}
+                <ul class="messages">
+                  {% for message in messages %}
+                    <li {% if message.tags %} style="font-size: 14px; color: red; padding: 10px;" lass="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              </div>
+              <div class="col-md-12">
+                <input class="contactus" placeholder="Your Username" type="text" name="username">
+              </div>
+              <div class="col-md-12">
+                <input class="contactus" placeholder="Your Password" type="password" name="password">
+              </div>
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <button type="Submit" class="send" >Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- end contact -->
+
+
+
+{% endblock content %}
