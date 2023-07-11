@@ -429,13 +429,8 @@
       <div class="row">
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-          <div id="">
-            <iframe
-            width="600"
-            height="450"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=San+Francisco">
-          </iframe>
+          <div id="map">
+            
           </div>
 
         </div>
@@ -445,7 +440,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="titlepage">
-                  <h2>Contact <strong class="yellow">us</strong></h2>
+                  <h2>Contact Us<strong class="yellow"> to Apply</strong></h2>
                 </div>
                 <div class="col-md-12">
                   <input class="contactus" placeholder="Your Name" type="text" name="Your Name">
@@ -460,7 +455,7 @@
                   <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
                 </div>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                  <button class="send">Send</button>
+                  <button class="send" data-toggle="modal" data-target="#myModal">Send</button>
                 </div>
               </div>
             </form>
@@ -471,6 +466,27 @@
     </div>
 
     <!-- end contact -->
+
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">RAINBOW SCHOOL COMPLEX</h4>
+          </div>
+          <div class="modal-body">
+            <p>Thank you! We will get back to you shortly</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">ok! Thanks</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
 
     <!--  footer -->
     <footr>
