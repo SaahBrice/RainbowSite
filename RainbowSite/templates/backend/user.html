@@ -14,6 +14,72 @@
     <div class="row">
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
 
+
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+          <div class="contact_bg mx-auto" >
+            <div class="row">
+              <div class="col-md-12">
+                <div class="titlepage">
+                  <h2>
+                    <a class="btn btn-sm btn-danger"  href = "{% url 'deleteResult' %} ">Delete current results</a>
+                    {% if rlt.active %}
+                    <p>Parents can view </p>
+                    <a class="btn btn-sm btn-danger"  href = "{% url 'deactivateView' %} ">DEACTIVATE</a>
+                    {% else %}
+                    <p>Parents cannot view </p>
+                    <a class="btn btn-sm btn-success"  href = "{% url 'activateView' %} ">ACTIVATE</a>
+                    {% endif %}<strong class="yellow"> Results</strong></h2>
+                </div>
+                <div class="col-md-12">
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <form class="contact_bg mx-auto" action="" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-md-12">
+              <div class="titlepage">
+                <h2>Update<strong class="yellow"> Results</strong></h2>
+              </div>
+              <div class="col-md-12">
+                  <p>Form 1</p>
+                  <input type="file" class="contactus" placeholder="Select post image" name="form1">
+                  <p>Form 2</p>
+                  <input type="file" class="contactus" placeholder="Select post image" name="form2">
+                  <p>Form 3</p>
+                  <input type="file" class="contactus" placeholder="Select post image" name="form3">
+                  <p>Form 4</p>
+                  <input type="file" class="contactus" placeholder="Select post image" name="form4">
+                  <p>Form 5</p>
+                  <input type="file" class="contactus" placeholder="Select post image" name="form5">
+                  <p>Lowersixth science</p>
+                  <input type="file" class="contactus" placeholder="Select post image" name="lsa">
+                  <p>Lowersixth arts</p>
+                  <input type="file" class="contactus" placeholder="Select post image" name="lss">
+                  <p>Uppersixth Science</p>
+                  <input type="file" class="contactus" placeholder="Select post image" name="usa">
+                  <p>Uppersixth arts</p>
+                  <input type="file" class="contactus" placeholder="Select post image" name="uss">
+              </div>
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <button type="Submit" class="send" name="results">UPDATE</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+
+
+
         <form class="contact_bg mx-auto" action="" method="POST" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="row">

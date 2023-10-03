@@ -23,28 +23,38 @@
       <div class="white_color">
         <div class="row">
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-    
-            <form class="contact_bg mx-auto">
+            
+            <form class="contact_bg mx-auto" method="POST">
+              {% csrf_token %}
             <div class="row">
                 <div class="col-md-12 ">
                   <div class="titlepage">
                    
                   </div>
                   <div class="col-md-12">
-                    <input class="contactus" placeholder="Student's Code" type="text" name="Your Name">
-                    <label for="exampleFormControlSelect1">Student's Class</label>
-                    <select class="contactus" id="">
-                        <option>Form 1</option>
-                        <option>Form 2</option>
-                        <option>Form 3</option>
-                        <option>Form 4</option>
-                        <option>Form 5</option>
-                        <option>LowerSixth Science</option>
-                        <option>LowerSixth Arts</option>
-                        <option>UpperSixth Science</option>
-                        <option>UpperSixth Science</option>
+                    <input class="contactus" placeholder="Student's code" type="text" name="matricule">
+                    <label for="exampleFormControlSelect1">Class</label>
+                    <select class="contactus" id="exampleFormControlSelect1"  name ="class">
+                        <option>form1</option>
+                        <option>form2</option>
+                        <option>form3</option>
+                        <option>form4</option>
+                        <option>form5</option>
+                        <option>lowersixthscience</option>
+                        <option>lowersixtharts</option>
+                        <option>uppersixthscience</option>
+                        <option>uppersixtharts</option>
                     </select>
-                    <button class="send" data-toggle="modal" data-target="#myModal">Download</button>
+                    <label for="exampleFormControlSelect2">Sequence</label>
+                    <select class="contactus" id="exampleFormControlSelect2"  name ="sequence">
+                        <option>seq1</option>
+                        <option>seq2</option>
+                        <option>seq3</option>
+                        <option>seq4</option>
+                        <option>seq5</option>
+                        <option>seq6</option>
+                    </select>
+                    <button type="submit" class="send" data-toggle="modal" data-target="#myModal">View</button>
                   </div>
 
                 </div>
