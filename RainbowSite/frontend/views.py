@@ -34,6 +34,8 @@ def gallery(request):
     }
     return render(request, 'frontend/gallery.html', context)
 
+def result(request):
+    return render(request, 'frontend/result.html')
 
 
 def my_blog(request):

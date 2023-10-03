@@ -1,0 +1,68 @@
+{% extends 'frontend/index.html' %}
+{% load static %}
+{% block title %}
+    Rainbow School Complex Dschang
+{% endblock title %}
+
+{% block content %}
+
+<style>
+  .hover-zoom:hover {
+    z-index: 9999;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+</style>
+
+
+
+
+<!-- contact -->
+<div id="contact" class="contact">
+    <div class="container-fluid padding_left2">
+      <div class="white_color">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+    
+            <form class="contact_bg mx-auto">
+            <div class="row">
+                <div class="col-md-12 ">
+                  <div class="titlepage">
+                   
+                  </div>
+                  <div class="col-md-12">
+                    <input class="contactus" placeholder="Student's Code" type="text" name="Your Name">
+                    <label for="exampleFormControlSelect1">Student's Class</label>
+                    <select class="contactus" id="">
+                        <option>Form 1</option>
+                        <option>Form 2</option>
+                        <option>Form 3</option>
+                        <option>Form 4</option>
+                        <option>Form 5</option>
+                        <option>LowerSixth Science</option>
+                        <option>LowerSixth Arts</option>
+                        <option>UpperSixth Science</option>
+                        <option>UpperSixth Science</option>
+                    </select>
+                    <button class="send" data-toggle="modal" data-target="#myModal">Download</button>
+                  </div>
+
+                </div>
+            </div>
+            </form>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 my-auto">
+                <div class="titlepage">
+                    <h2>CHANGING THE GAME<strong class="yellow"> SINCE 2003</strong></h2>
+                  </div>
+        
+              </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+
+
+
+{% endblock content %}
